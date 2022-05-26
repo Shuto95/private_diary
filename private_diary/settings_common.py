@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'accounts.apps.AccountsConfig',
 
     'django.contrib.sites',
-    'allatuth',
+    'allauth',
     'allauth.account',
     'django_bootstrap5',
 ]
@@ -166,7 +166,7 @@ ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_EMAIL_REQUIRED = True
 
 # ログイン/ログアウト後の遷移先を設定
-LOGIN_REDIRECT_URL = 'diary:index'
+LOGIN_REDIRECT_URL = 'diary:diary_list'
 ACCOUNT_LOGOUT_REDIRECT_URL = 'account_index'
 
 # ログアウトのクリック一発でログアウトする設定
@@ -177,3 +177,5 @@ ACCOUNT_EMAIL_SUBJECT_PREFIX =''
 
 # デフォルトのメール送信元を設定
 DEFAULT_FROM_EMAIL = os.environ.get('FROM_EMAIL')
+
+MEDIA_URL = '/media/'
